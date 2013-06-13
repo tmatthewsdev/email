@@ -27,6 +27,13 @@ Autoloader::add_classes(array(
 	'Email\\Email_Driver_Noop'				=> __DIR__.'/classes/email/driver/noop.php',
 
 	/**
+	 * Mailman classes.
+	 */
+	'Email\\Mailman'						=> __DIR__.'/classes/mailman.php',
+	'Email\\Mailman_Log_Email'				=> __DIR__.'/classes/mailman/log/email.php',
+	'Email\\Mailman_Log_Recipient'			=> __DIR__.'/classes/mailman/log/recipient.php',
+
+	/**
 	 * Email exceptions.
 	 */
 	'Email\\AttachmentNotFoundException'	=> __DIR__.'/classes/email.php',
