@@ -312,6 +312,16 @@ abstract class Email_Driver
 	}
 
 	/**
+	 * Get to recipients list.
+	 * 
+	 * @return array		$this->to	array of email addresses
+	 */
+	public function get_to()
+	{
+		return $this->to;
+	}
+
+	/**
 	 * Add to the cc recipients list.
 	 *
 	 * @param	string|array	$email	email address or list of email addresses, array(email => name, email)
@@ -325,6 +335,15 @@ abstract class Email_Driver
 		return $this;
 	}
 
+	/**
+	 * Get cc recipients list.
+	 * 
+	 * @return array		$this->cc	array of email addresses
+	 */
+	public function get_cc()
+	{
+		return $this->cc;
+	}
 
 	/**
 	 * Add to the bcc recipients list.
@@ -341,6 +360,16 @@ abstract class Email_Driver
 	}
 
 	/**
+	 * Get bcc recipients list.
+	 * 
+	 * @return array		$this->bcc	array of email addresses
+	 */
+	public function get_bcc()
+	{
+		return $this->bcc;
+	}
+
+	/**
 	 * Add to the 'reply to' list.
 	 *
 	 * @param	string|array	$email	email address or list of email addresses, array(email => name, email)
@@ -352,6 +381,16 @@ abstract class Email_Driver
 		static::add_to_list('reply_to', $email, $name);
 
 		return $this;
+	}
+
+	/**
+	 * Get 'reply to' list.
+	 * 
+	 * @return array		$this->reply_to	array of email addresses
+	 */
+	public function get_reply_to()
+	{
+		return $this->reply_to;
 	}
 
 	/**
