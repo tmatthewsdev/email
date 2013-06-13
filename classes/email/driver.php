@@ -228,6 +228,16 @@ abstract class Email_Driver
 		return $this;
 	}
 
+
+	/**
+	 * 
+	 */
+	public function get_body()
+	{
+		return $this->body;
+	}
+
+
 	/**
 	 * Sets the message subject
 	 *
@@ -243,6 +253,12 @@ abstract class Email_Driver
 		$this->subject = (string) $subject;
 
 		return $this;
+	}
+
+
+	public function get_subject()
+	{
+		return $this->subject;
 	}
 
 	/**
@@ -263,6 +279,22 @@ abstract class Email_Driver
 		}
 
 		return $this;
+	}
+
+	/**
+	 * 
+	 */
+	public function get_from_email()
+	{
+		return $this->config['from']['email'];
+	}
+
+	/**
+	 * 
+	 */
+	public function get_from_name()
+	{
+		return $this->config['from']['name'];
 	}
 
 	/**
